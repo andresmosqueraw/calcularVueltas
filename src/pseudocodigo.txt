@@ -1,0 +1,47 @@
+INICIO
+
+CONSTANTES:
+    BILLETES = [2000, 5000, 10000, 20000, 50000, 100000]
+    MONEDAS = [50, 100, 200, 500, 1000]
+
+PROCEDIMIENTO principal:
+    saldo = 50000
+    producto = 5650
+
+    IMPRIMIR "Saldo: " + saldo
+    IMPRIMIR "Precio producto: " + producto
+
+    SI saldo < producto ENTONCES
+        IMPRIMIR "Saldo insuficiente"
+    SINO SI saldo == producto ENTONCES
+        IMPRIMIR "No hay vueltas"
+    SINO
+        vueltas = saldo - producto
+        IMPRIMIR "Vueltas: " + vueltas
+        LLAMAR PROCEDIMIENTO calcularVueltas CON vueltas
+    FIN SI
+
+FIN PROCEDIMIENTO principal
+
+PROCEDIMIENTO calcularVueltas(cantidad):
+    IMPRIMIR "Billetes:"
+    PARA i = LONGITUD(BILLETES) - 1 HASTA 0 DECREMENTO -1
+        billete = BILLETES[i]
+        SI cantidad / billete > 0 ENTONCES
+            IMPRIMIR "Billetes de " + billete + ": " + (cantidad / billete)
+            cantidad = cantidad % billete
+        FIN SI
+    FIN PARA
+
+    IMPRIMIR "Monedas:"
+    PARA i = LONGITUD(MONEDAS) - 1 HASTA 0 DECREMENTO -1
+        moneda = MONEDAS[i]
+        SI cantidad / moneda > 0 ENTONCES
+            IMPRIMIR "Monedas de " + moneda + ": " + (cantidad / moneda)
+            cantidad = cantidad % moneda
+        FIN SI
+    FIN PARA
+
+FIN PROCEDIMIENTO calcularVueltas
+
+FINAL

@@ -1,0 +1,94 @@
+Se nos da un saldo inicial de 50000 y el precio del producto es de 5650.
+
+Inicio del programa:
+
+saldo = 50000
+producto = 5650
+
+
+Salida:
+
+Saldo: 50000
+Precio producto: 5650
+
+
+Luego, la condición (saldo < producto) es false y (saldo == producto) es también false. Por lo tanto, se ejecuta el bloque else.
+
+
+Cálculo:
+
+vueltas = saldo - producto
+vueltas = 50000 - 5650 = 44350
+
+
+Salida:
+
+Vueltas: 44350
+
+
+Llamamos a calcularVueltas(44350):
+
+
+
+Primero, vamos a calcular la cantidad de billetes para 44350.
+
+Billetes:
+
+Usando el array BILLETES:
+
+100000: 0 billetes (44350/100000 = 0)
+50000: 0 billetes (44350/50000 = 0)
+20000: 2 billetes (44350/20000 = 2, quedan 4350)
+10000: 0 billetes (4350/10000 = 0)
+5000: 0 billetes (4350/5000 = 0)
+2000: 2 billetes (4350/2000 = 2, quedan 350)
+
+
+Salida:
+
+Billetes:
+Billetes de 20000: 2
+Billetes de 2000: 2
+
+
+
+Ahora, vamos a calcular la cantidad de monedas para los 350 restantes.
+Monedas:
+
+Usando el array MONEDAS:
+
+1000: 0 monedas (350/1000 = 0)
+500: 0 monedas (350/500 = 0)
+200: 1 moneda (350/200 = 1, quedan 150)
+100: 1 moneda (150/100 = 1, quedan 50)
+50: 1 moneda (50/50 = 1, quedan 0)
+
+
+Salida:
+
+Monedas:
+Monedas de 200: 1
+Monedas de 100: 1
+Monedas de 50: 1
+
+
+
+
+La salida final sería:
+
+Saldo: 50000
+Precio producto: 5650
+
+Vueltas: 44350
+
+Billetes:
+Billetes de 20000: 2
+Billetes de 2000: 2
+
+Monedas:
+Monedas de 200: 1
+Monedas de 100: 1
+Monedas de 50: 1
+
+
+La función calcularVueltas devuelve correctamente la combinación de billetes y monedas que totalizan la cantidad de cambio necesaria.
